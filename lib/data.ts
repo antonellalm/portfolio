@@ -66,14 +66,14 @@ export const projectsData = [
   {
     title: "ViandApp",
     description:
-      "I worked for a month on this application, which addresses a real need for a real customer of the meal service. This was the final project of my time at Henry, which I completed alongside 7 classmates. It was a wonderful and enriching experience where I learned a lot in a short period. We not only challenged ourselves and used numerous new technologies but also translated all the client's requirements into corresponding functionalities. We worked within the Scrum framework and used Jira.",
+      " Proyecto final del bootcamp Henry:Aplicación que cubre las necesidades de un cliente real.",
     tags: ["React", "Next.js", "Tailwind", "Prisma"],
     imageUrl: viandAppImg,
   },
   {
     title: "FoodApp",
     description:
-      "I developed this application while attending the Henry bootcamp. It was fascinating to learn so much while working on it. What I highlight the most about this project is the UI development. I exclusively used CSS, which allowed me to delve deeply into it and later enabled me to easily adapt when using any CSS library.",
+      "Proyecto individual en Henry Bootcamp:Era un requisito trabajar sin librerías frontend, lo cual fue enriquecedor para aprender CSS en profundidad.",
     tags: [
       "React",
       "Redux",
