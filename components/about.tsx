@@ -1,7 +1,18 @@
+"use client";
+import { SectionHeading } from "./section-heading";
+import { motion } from "framer-motion";
+
 export const About = () => {
   return (
-    <section className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40">
-      <h2 className="text-3xl font-medium capitalize mb-8">About me</h2>
+    <motion.section
+      className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        delay: 0.175,
+      }}
+    >
+      <SectionHeading>About me</SectionHeading>
       <p className="mb-3">
         I have always been passionate about observing how software applications
         and services have drastically changed people's habits, as well as how
@@ -10,7 +21,7 @@ export const About = () => {
         that I wanted to enhance people's product and make it visible and
         profitable for the public. Later, I pursued a diploma in Product
         Management, which introduced me to the world of software products and
-        services. Upon completing the diploma, I understand of the endless
+        services. Upon completing the diploma course, I understand the endless
         possibilities offered by software development. When I enrolled in a
         coding bootcamp, I realized that it was my opportunity to learn web
         development and contribute to the creation products and services that
@@ -25,6 +36,6 @@ export const About = () => {
           CSS, NodeJS, Express.js, PostgreSQL, Sequelize
         </span>{" "}
       </p>
-    </section>
+    </motion.section>
   );
 };
