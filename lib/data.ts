@@ -5,6 +5,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import viandAppImg from "@/public/viandApp.png";
+import fooAppImg from "@/public/copia.png";
 
 export const links = [
   {
@@ -62,25 +64,27 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "ViandApp",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked for a month on this application, which addresses a real need for a real customer of the meal service. This was the final project of my time at Henry, which I completed alongside 7 classmates. It was a wonderful and enriching experience where I learned a lot in a short period. We not only challenged ourselves and used numerous new technologies but also translated all the client's requirements into corresponding functionalities. We worked within the Scrum framework and used Jira.",
+    tags: ["React", "Next.js", "Tailwind", "Prisma"],
+    imageUrl: viandAppImg,
   },
   {
-    title: "rmtDev",
+    title: "FoodApp",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
-  },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "I developed this application while attending the Henry bootcamp. It was fascinating to learn so much while working on it. What I highlight the most about this project is the UI development. I exclusively used CSS, which allowed me to delve deeply into it and later enabled me to easily adapt when using any CSS library.",
+    tags: [
+      "React",
+      "Redux",
+      "JavaScript",
+      "CSS",
+      "NodeJS",
+      "Express.js",
+      "PostgreSQL",
+      "Sequelize",
+    ],
+    imageUrl: fooAppImg,
   },
 ] as const;
 
