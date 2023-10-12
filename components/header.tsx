@@ -2,10 +2,12 @@
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import clsx from "clsx";
+import { ActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
+  const { activeSection, setActiveSection } = useContext(ActiveSectionContext);
   return (
     <header className="z-[999] relative">
       <motion.div
