@@ -3,14 +3,19 @@ import { SectionHeading } from "./section-heading";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useEffect } from "react";
 
 export const About = () => {
-  const { ref, inView } = useInView();
-  useActiveSectionContext();
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+  const { setActiveSection } = useActiveSectionContext();
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection]);
 
-  if (inView) {
-    setActiveSection("About");
-  }
   return (
     <motion.section
       ref={ref}
