@@ -38,6 +38,7 @@ export default function Skills() {
             viewport={{
               once: true,
             }}
+            custom={index}
           >
             {skill}
           </motion.li>
