@@ -7,6 +7,7 @@ import { useSectionInView } from "@/lib/hooks";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+
   return (
     <motion.section
       ref={ref}
@@ -30,8 +31,17 @@ export default function Contact() {
         </a>
         or through this form.
       </p>
-      <form action="mt-10" className="mt-10 flex flex-col">
+      <form
+        action={async (formData) => {
+          console.log("running on client");
+          console.log(formData.get("senderEmail"));
+          console.log(formData.get("message"));
+          await sendEmail(formData);
+        }}
+        className="mt-10 flex flex-col"
+      >
         <input
+          name="senderEmail"
           required
           maxLength={500}
           placeholder="Your email"
