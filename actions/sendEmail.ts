@@ -9,7 +9,7 @@ export const sendEmail = async (formData: FormData) => {
   // console.log(formData.get("senderEmail"));
   // console.log(formData.get("message"));
 
-  const senderEmail = formData.get("email");
+  const senderEmail = formData.get("senderEmail");
   const message = formData.get("message");
 
   if (!validateString(senderEmail, 500)) {
@@ -23,11 +23,15 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
-  resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "antonellarios0098@gmail.com",
-    subject: "Mensaje de contact Form",
-    reply_to: senderEmail,
-    text: message,
-  });
+  try {
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "antonellarios0098@gmail.com",
+      subject: "Mensaje de contact Form",
+      reply_to: senderEmail as string,
+      text: message as string,
+    });
+  } catch (error) {
+    console.log(error);
+  }
 };
