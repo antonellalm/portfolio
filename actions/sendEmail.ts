@@ -1,12 +1,8 @@
 "use server";
 import { Resend } from "resend";
+import { validateString } from "@/lib/utils";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
-const validateString = (value: unknown, maxLenght: number) => {
-  if (!value || typeof value !== "string" || value.length > maxLenght) {
-    return false;
-  }
-  return true;
-};
 
 export const sendEmail = async (formData: FormData) => {
   // console.log("Running on server");
