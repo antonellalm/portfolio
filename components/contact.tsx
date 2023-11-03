@@ -5,10 +5,11 @@ import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
+import { experimental_useFormStatus as useFormStatus } from "react-dom";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
-
+  const { pending } = useFormStatus();
   return (
     <motion.section
       ref={ref}
