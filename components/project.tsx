@@ -38,7 +38,7 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 max-w-xs dark:text-white/70">
             {description}
           </p>
-          <div className="flex flex-col gap-[17rem] ">
+          <div className="flex flex-col sm:gap-[17rem] ">
             <ul className="flex flex-wrap mt-4 gap-2 mr-1 ">
               {tags.map((tag, index) => (
                 <li
@@ -49,7 +49,7 @@ export default function Project({
                 </li>
               ))}
             </ul>
-            <div className="max-w-[50%]">
+            <div className="sm:max-w-[50%]">
               {" "}
               <div></div>
             </div>
@@ -57,7 +57,7 @@ export default function Project({
         </div>
 
         <Image
-          className={`absolute top-8 -right-40   w-[28.25rem] rounded-t-lg shadow-2xl 
+          className={`absolute hidden sm:block top-8 -right-40   w-[28.25rem] rounded-t-lg shadow-2xl 
          transition
          group-hover:scale-[1.04]
           `}
