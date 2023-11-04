@@ -15,6 +15,6 @@ module.exports = {
     },
   },
   plugins: [],
-  important: true,
   darkMode: "class",
+  important: true,
 };
