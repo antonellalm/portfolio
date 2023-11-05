@@ -8,7 +8,7 @@ const App = ({ Component, pageProps }) => {
     <AnimatePresence mode="wait">
       <motion.div key={router.pathname}>
         <Component {...pageProps} />
-        <div></div>
+        <div>holis</div>
       </motion.div>
     </AnimatePresence>
   );
