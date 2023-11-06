@@ -26,10 +26,6 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
     name: "Contact",
     hash: "#contact",
   },
@@ -66,14 +62,15 @@ export const projectsData = [
   {
     title: "ViandApp",
     description:
-      " Proyecto final del bootcamp Henry:Aplicación que cubre las necesidades de un cliente real.",
+      "Final project of the Bootcamp, it is an advanced application with multiple functionalities covering all the client's needs. For more information about the project development, download my CV.",
     tags: ["React", "Next.js", "Tailwind", "Prisma"],
     imageUrl: viandAppImg,
+    urlProject: "https://vianda-app.vercel.app/",
   },
   {
-    title: "FoodApp",
+    title: "App",
     description:
-      "Proyecto individual en Henry Bootcamp:Era un requisito trabajar sin librerías frontend, lo cual fue enriquecedor para aprender CSS en profundidad.",
+      "Database creation, server construction consuming REST API to develop the  beautifully designed UI.For more information about the project development, download my CV. ",
     tags: [
       "React",
       "Redux",
@@ -85,6 +82,7 @@ export const projectsData = [
       "Sequelize",
     ],
     imageUrl: fooAppImg,
+    urlProject: "https://mycookapp.vercel.app/",
   },
 ] as const;
 
@@ -96,15 +94,14 @@ export const skillsData = [
   "React",
   "Redux",
   "Next.js",
+  "Sass",
+  "Tailwind",
+  "Framer Motion",
   "Node.js",
   "Express",
   "Git",
   "Tailwind",
   "Prisma",
-
-  "GA4",
   "PostgreSQL",
   "Sequalize",
-
-  "Framer Motion",
 ] as const;
