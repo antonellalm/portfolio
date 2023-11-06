@@ -28,10 +28,10 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:antonellarios0098@gmail.com">
+        <a className="underline pr-1" href="mailto:antonellarios0098@gmail.com">
           antonellarios0098@gmail.com
         </a>
-        or through this form.
+        or put your email and your message.
       </p>
       <form
         action={async (formData) => {

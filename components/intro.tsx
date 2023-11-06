@@ -61,7 +61,7 @@ export const Intro = () => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I am Antonella Rios.</span> I am
+        <span className="font-bold">Hello, I'm Antonella Rios.</span> I'm
         <span className="font-bold">full-stack developer</span> specializing in{" "}
         <span className="font-bold">FrontEnd,</span> I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
@@ -106,7 +106,7 @@ export const Intro = () => {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10 dark:bg-white/10"
+          className="bg-white p-4 text-gray-800 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-110 active:scale-105 hover:text-gray-950 transition cursor-pointer border border-black/10 dark:bg-white/10"
           href="https://github.com/antonellalm"
           target="_blank"
         >
