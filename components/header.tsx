@@ -1,3 +1,4 @@
+"use client";
 import { links } from "@/lib/data";
 import { motion } from "framer-motion";
 import Link from "next/link";
