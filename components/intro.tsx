@@ -10,6 +10,39 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 import { useEffect } from "react";
 import { useSectionInView } from "@/lib/hooks";
 
+async function getBase64PDF() {
+  const response = await fetch("/CVAntonellaRios.pdf");
+  const blob = await response.blob();
+
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function handleClick(
+  e: React.MouseEvent<HTMLAnchorElement>
+): Promise<any> {
+  e.preventDefault();
+  const base64PDF = await getBase64PDF();
+  if (typeof base64PDF === "string") {
+    let binaryString = window.atob(base64PDF.split(",")[1]);
+    let binaryLen = binaryString.length;
+    let bytes = new Uint8Array(binaryLen);
+    for (let i = 0; i < binaryLen; i++) {
+      let ascii = binaryString.charCodeAt(i);
+      bytes[i] = ascii;
+    }
+    let blob = new Blob([bytes], { type: "application/pdf" });
+    let link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = "nombreDelArchivo.pdf";
+    link.click();
+  }
+}
+
 export const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -90,7 +123,8 @@ export const Intro = () => {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
-          href="/CV.pdf"
+          href="/CVAntonellaRios.pdf"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => handleClick(e)}
           download
         >
           Download CV{" "}
